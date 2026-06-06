@@ -1,76 +1,75 @@
-````md
-# Studio Namma Clone
+# 🎨 Studio Namma Clone
 
-A pixel-perfect front-end clone of the Studio Namma website built using HTML, CSS, and JavaScript. This project recreates the modern creative agency experience with immersive animations, custom cursor interactions, video backgrounds, portfolio showcases, and engaging UI effects.
+A modern and interactive front-end clone of the Studio Namma website built using **HTML, CSS, and JavaScript**. This project recreates the premium creative agency experience through immersive animations, custom cursor effects, fullscreen navigation, video-based interactions, and visually engaging UI components.
 
-## ✨ Features
+## 🚀 Features
 
-- 🎨 Modern Studio Namma-inspired design
-- 🖱️ Custom animated cursor
-- 📱 Responsive layout
-- 🎬 Video backgrounds and previews
-- 📂 Interactive fullscreen navigation menu
-- 🖼️ Hover image reveal effects
-- 🚀 Smooth animations and transitions
-- 💼 Portfolio showcase section
-- 📞 Call-to-action interaction effects
+- Custom animated cursor interactions
+- Fullscreen overlay navigation menu
+- Dynamic hero section with video background
+- Interactive hover image reveal effects
+- Portfolio showcase with video previews
+- Smooth animations and transitions
+- Creative agency-inspired design
+- Responsive and modern UI
+- Interactive call-to-action sections
 
-## 🛠️ Tech Stack
+## 🛠️ Technologies Used
 
 - HTML5
 - CSS3
-- JavaScript (ES6)
+- JavaScript (Vanilla JS)
 
-## 📸 Screenshots
+## 📂 Project Structure
 
-Add project screenshots here.
+```bash
+Studio-Namma-Clone/
+│
+├── index.html
+├── style.css
+├── script.js
+├── video/
+├── Font/
+└── README.md
+```
 
-## 🚀 Live Demo
+## 🎯 Learning Outcomes
 
-https://your-demo-link.com
+Through this project, I gained hands-on experience with:
 
-## 📂 Installation
+- Advanced CSS layouts and animations
+- DOM manipulation using JavaScript
+- Custom cursor implementation
+- Event-driven interactions
+- Video integration in web projects
+- Creative UI/UX design principles
+
+## 🚀 Getting Started
 
 1. Clone the repository
 
 ```bash
 git clone https://github.com/your-username/studio-namma-clone.git
-````
+```
 
-2. Open the project folder
+2. Navigate to the project directory
 
 ```bash
 cd studio-namma-clone
 ```
 
-3. Run the project
+3. Open `index.html` in your browser.
 
-Open `index.html` in your browser.
+## 📸 Preview
 
-## 🎯 What I Learned
-
-* Advanced CSS animations
-* Custom cursor implementation
-* DOM manipulation with JavaScript
-* Interactive UI/UX development
-* Video integration in websites
-* Creative agency-style layouts
+Add screenshots or a live demo link here.
 
 ## ⚠️ Disclaimer
 
-This project was created for learning and portfolio purposes only. The original design inspiration belongs to Studio Namma. No copyright infringement is intended.
+This project is created solely for educational and portfolio purposes. The original design inspiration belongs to Studio Namma. No commercial use is intended.
 
 ## 👨‍💻 Author
 
 **Parth**
 
-If you like this project, give it a ⭐ on GitHub!
-
-```
-
-**Suggested GitHub Repository Name:**
-- `studio-namma-clone`
-- `studio-namma-website-clone`
-- `studio-namma-ui-clone`
-- `studio-namma-frontend-clone`
-```
+If you found this project interesting, consider giving it a ⭐ on GitHub!
