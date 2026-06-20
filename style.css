@@ -8,7 +8,7 @@ html,
 body {
     width: 100%;
     height: 100%;
-    overflow: none;
+    overflow: visible;
     background-color: #E4E4E4;
 }
 @font-face {
@@ -66,7 +66,8 @@ header p {
     position: fixed;
     left: -60%;
     top: -125%;
-    transition: cubic-bezier(.05,.78,.9,.59)0.4s;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(.05,.78,.9,.59);
 }
 .line{
     position: relative;
@@ -130,9 +131,6 @@ header p {
 
 .allmenu{
     font-size: 140px;
-}
-
-.allmenu{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,7 +159,7 @@ header p {
     justify-content: center;
     text-transform: uppercase;
     font-size: 80px;
-    font-width: 900;
+    font-weight: 900;
     font-family: PressuraBold;
 }
 
@@ -184,11 +182,6 @@ header p {
     "box3 box4";
     gap: 20px;
     justify-content: space-evenly;
-    /* padding: 10px; */
-}
-
-.overlay{
-    pointer-events: none;
 }
 
 .box{
@@ -222,26 +215,27 @@ header p {
 }
 
 .box1 .bg{
-    background-image: url("https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68bb0be00336912e360b324f_main%20case%20cover%20matera%20(1)-p-2000.webp");
+    background-image: url("Images/matera-cover.webp");
 }
 
 .box2 .bg{
-    background-image: url("https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68bae5b9f22246585fe911d0_chance-cover-desktop-p-2000.webp");
+    background-image: url("Images/chance-cover.webp");
 }
 
 .box3 .bg{
-    background-image: url("https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68beb68ead192a24f9ad4372_silvr%20case%20cover%20(1)-p-2000.webp");
+    background-image: url("Images/silvr-cover.webp");
 }
 
 .box4 .bg{
-    background-image: url("https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68bb1c497ad001257f2e727f_intramuros-cover-case-home%20(1)-p-1600.webp");
+    background-image: url("Images/intramuros-cover.webp");
 }
 
 .box:hover{
     transform: scale(0.96);
-    .boxvideo{
-        opacity: 1;
-    }
+}
+
+.box:hover .boxvideo{
+    opacity: 1;
 }
 
 .box:hover .bg{
@@ -420,7 +414,7 @@ header p {
 .h7img{
     width:180px;
     height:100px;
-    background:url("https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68dce0426bc778f79210aebb_CTA-Team_Namma.webp")
+    background:url("Images/team.webp")
         center/cover no-repeat;
     border-radius:10px;
 }

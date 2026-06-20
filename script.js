@@ -4,13 +4,14 @@ let overlay = document.querySelector(".overlay")
 let body = document.querySelector(".body")
 let video = document.querySelector(".video")
 let flag = 1
-menus.addEventListener("click",()=>{
+function toggleMenu(){
     if(flag){
         overlay.style.top = "0%"
         overlay.style.pointerEvents = "all"
         overlay.style.transform = "rotate(5deg) translateY(-8%)"
         menus.textContent ="CLOSE"
         body.style.overflow="hidden"
+        menus.setAttribute("aria-expanded","true")
         flag = 0
     }
     else{
@@ -19,7 +20,15 @@ menus.addEventListener("click",()=>{
         overlay.style.transform = "rotate(0deg) translateY(-8%)"
         menus.textContent ="MENU"
         body.style.overflow="auto"
+        menus.setAttribute("aria-expanded","false")
         flag = 1
+    }
+}
+menus.addEventListener("click", toggleMenu)
+menus.addEventListener("keydown",(e)=>{
+    if(e.key === "Enter" || e.key === " "){
+        e.preventDefault()
+        toggleMenu()
     }
 })
 
@@ -34,6 +43,19 @@ sayhello.addEventListener("mouseenter",()=>{
 sayhello.addEventListener("mouseleave",()=>{
     isHello = false;
 });
+
+let hero1El = document.querySelector(".hero1");
+let portfolioEl = document.querySelector(".hero4 div");
+let box1El = document.querySelector(".box1");
+let box2El = document.querySelector(".box2");
+let box3El = document.querySelector(".box3");
+let box4El = document.querySelector(".box4");
+
+function inRect(el, x, y){
+    if(!el){ return false; }
+    let r = el.getBoundingClientRect();
+    return x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
+}
 
 document.addEventListener("mousemove",(m) => {
 
@@ -53,7 +75,7 @@ document.addEventListener("mousemove",(m) => {
         floow.style.left = m.clientX + "px";
         return;
     }
-    else if(m.pageY <= 1025){
+    else if(inRect(hero1El, b, a)){
         floow.style.backgroundColor = "transparent"
         floow.style.height = "300px"
         floow.style.width = "200px"
@@ -67,7 +89,7 @@ document.addEventListener("mousemove",(m) => {
         video.style.opacity = "1"
     }
 
-    else if(m.pageY >= 3150 && m.pageY <= 3260 && m.pageX >= 555 && m.pageX <= 1360){
+    else if(inRect(portfolioEl, b, a)){
         floow.style.backgroundColor = "blue"
         floow.style.height = "50px"
         floow.style.width = "150px"
@@ -81,9 +103,8 @@ document.addEventListener("mousemove",(m) => {
         floow.style.fontSize = "25px"
         floow.innerHTML = "PORTFOLIO"
         video.style.opacity ="0"
-    // }else(m.pageY > 1025 && m.pageY < 3150){
     }
-    else if(m.pageY >= 3450 && m.pageY <= 4325 && m.pageX <= 950 && m.pageX >= 15){
+    else if(inRect(box1El, b, a)){
         floow.style.backgroundColor = "blue"
         floow.style.height = "50px"
         floow.style.width = "90px"
@@ -98,7 +119,7 @@ document.addEventListener("mousemove",(m) => {
         floow.innerHTML = "MATERA"
         video.style.opacity ="0"
     }
-    else if(m.pageY >= 3450 && m.pageY <= 4325 && m.pageX <= 2000 && m.pageX >= 977){
+    else if(inRect(box2El, b, a)){
         floow.style.backgroundColor = "blue"
         floow.style.height = "50px"
         floow.style.width = "100px"
@@ -113,7 +134,7 @@ document.addEventListener("mousemove",(m) => {
         floow.innerHTML = "CHANCE"
         video.style.opacity ="0"
     }
-    else if(m.pageY >= 4354 && m.pageY <= 5214 && m.pageX <= 950 && m.pageX >= 15){
+    else if(inRect(box3El, b, a)){
         floow.style.backgroundColor = "blue"
         floow.style.height = "50px"
         floow.style.width = "80px"
@@ -128,7 +149,7 @@ document.addEventListener("mousemove",(m) => {
         floow.innerHTML = "SILVR"
         video.style.opacity ="0"
     }
-    else if(m.pageY >= 4354 && m.pageY <= 5214 && m.pageX <= 2000 && m.pageX >= 977){
+    else if(inRect(box4El, b, a)){
         floow.style.backgroundColor = "blue"
         floow.style.height = "50px"
         floow.style.width = "150px"
@@ -186,11 +207,12 @@ detail.addEventListener("mouseleave",()=>{
 let playground = document.querySelector(".playground");
 let imgs1 = document.querySelectorAll(".img2");
 
+let interval1;
 let index1 = 0;
 let zindx1 = 2;
 
 playground.addEventListener("mouseenter", () => {
-    interval = setInterval(() => {
+    interval1 = setInterval(() => {
         if (index1 < imgs1.length) {
             imgs1[index1].style.opacity = "1";
             playground.style.zIndex = index1;
@@ -204,7 +226,7 @@ playground.addEventListener("mouseenter", () => {
 });
 
 playground.addEventListener("mouseleave", () => {
-    clearInterval(interval);
+    clearInterval(interval1);
     imgs1.forEach((img) => {
         img.style.opacity = "0";
     });
