@@ -496,3 +496,206 @@ header p {
     font-family:PressuraBold;
     font-size: 600px;
 }
+
+@media (max-width: 1024px){
+    header{
+        gap: 0;
+        padding: 0 20px;
+    }
+    .left{
+        gap: 40px;
+    }
+    .hero1{
+        font-size: 90px;
+    }
+    .hero2{
+        height: 60vh;
+    }
+    .hero2 iframe{
+        height: 70vh;
+    }
+    .allmenu{
+        font-size: 90px;
+    }
+    .texth3{
+        font-size: 48px;
+    }
+    .hero4{
+        font-size: 90px;
+    }
+    .fsec{
+        height: auto;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .box{
+        height: 60vh;
+        width: 47vw;
+    }
+    .box video{
+        width: 90%;
+    }
+    .videobox{
+        width: 280px;
+        height: 220px;
+    }
+    .v1{ left: -520px; }
+    .v2{ left: -600px; }
+    .v3{ left: -610px; }
+    .v4{ left: -540px; }
+    .v5{ left: -490px; }
+    .v6{ left: -550px; }
+    .h6maint{
+        font-size: 54px;
+    }
+    .hero6{
+        height: 90vh;
+    }
+    .hero7{
+        height: auto;
+        padding: 60px 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 50px;
+    }
+    .h7-left{
+        font-size: 80px;
+    }
+    .h7-right{
+        max-width: 100%;
+        margin-right: 0;
+        font-size: 22px;
+    }
+    .hero8{
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+    .footer{
+        padding: 60px 40px;
+    }
+    .footer-right{
+        width: 50%;
+    }
+    .namma{
+        font-size: 300px;
+    }
+}
+
+@media (max-width: 600px){
+    header{
+        padding: 0 16px;
+    }
+    header p{
+        font-size: 13px;
+    }
+    .left{
+        width: 50%;
+        gap: 16px;
+    }
+    .right{
+        width: 50%;
+    }
+    .follower{
+        display: none;
+    }
+    .hero1{
+        height: 70vh;
+        font-size: 44px;
+    }
+    .hero2{
+        height: 40vh;
+    }
+    .hero2 iframe{
+        height: 45vh;
+    }
+    .allmenu{
+        font-size: 44px;
+        flex-direction: column;
+        margin-top: 30%;
+    }
+    .menu2{
+        margin-left: 0;
+        margin-top: 8%;
+    }
+    .hero3{
+        height: auto;
+        padding: 80px 16px;
+    }
+    .texth3{
+        font-size: 26px;
+        text-align: center;
+    }
+    .hero4{
+        height: 30vh;
+        font-size: 44px;
+    }
+    .fsec{
+        grid-template-areas:
+        "box1"
+        "box2"
+        "box3"
+        "box4";
+        height: auto;
+        gap: 15px;
+        padding: 15px;
+    }
+    .box{
+        height: 50vh;
+        width: 100%;
+    }
+    .box video{
+        width: 95%;
+    }
+    .hero6{
+        height: auto;
+        padding: 80px 0;
+        gap: 30px;
+    }
+    .h6maint{
+        font-size: 34px;
+    }
+    .h6sect,
+    .videobox{
+        display: none;
+    }
+    .img1,
+    .img2{
+        width: 160px;
+        height: 200px;
+    }
+    .hero7{
+        padding: 60px 20px;
+        gap: 40px;
+    }
+    .h7-left{
+        font-size: 48px;
+    }
+    .h7img{
+        width: 110px;
+        height: 64px;
+    }
+    .h7-right{
+        font-size: 18px;
+        gap: 40px;
+    }
+    .hero8{
+        grid-template-columns: repeat(2,1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+    .footer{
+        flex-direction: column;
+        gap: 50px;
+        padding: 50px 20px;
+    }
+    .footer-right{
+        width: 100%;
+    }
+    .footer-right p{
+        margin-bottom: 20px;
+        line-height: 1.8;
+    }
+    .namma{
+        font-size: 110px;
+    }
+}
