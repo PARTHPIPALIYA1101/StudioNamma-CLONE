@@ -49,7 +49,7 @@ Through this project, I gained hands-on experience with:
 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/studio-namma-clone.git
+git clone https://github.com/PARTHPIPALIYA1101/StudioNamma-CLONE.git
 ```
 
 2. Navigate to the project directory
